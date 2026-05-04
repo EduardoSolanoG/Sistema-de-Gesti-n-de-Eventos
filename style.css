@@ -1,0 +1,211 @@
+html, body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* HEADER */
+.header {
+    background-color: #1f2933;
+    color: white;
+    padding: 20px;
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.nav .activo {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* CONTENIDO */
+main {
+    padding: 20px;
+    min-height: calc(100vh - 160px);
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 30px 0 15px;
+}
+
+/* FORMULARIO */
+form {
+    max-width: 500px;
+    background-color: white;
+    padding: 25px;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"] {
+    background-color: #2563eb;
+    color: white;
+}
+
+form button[type="button"] {
+    background-color: #6b7280;
+    color: white;
+    margin-left: 10px;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+.obligatorio {
+    color: red;
+}
+
+/* TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #1f2933;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1f2933;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+/* MENÚ */
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .nav a {
+        margin-right: 0;
+    }
+}
+
+/* FORMULARIO */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    form button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    form button[type="button"] {
+        margin-top: 10px;
+    }
+}
+
+/* TABLAS */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* =====================
+   TABLAS RESPONSIVE
+===================== */
+
+.tabla-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-scroll table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+    .tabla-scroll table {
+        min-width: 600px;
+    }
+}
